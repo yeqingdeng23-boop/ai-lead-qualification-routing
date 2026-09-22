@@ -1,0 +1,20 @@
+{
+  "name": "AI Lead Qualification & Routing",
+  "engine": "Python + SQLite durable state machine (n8n-equivalent; not an n8n export)",
+  "entrypoint": "automation.workflow:Processor",
+  "flow": "Purchase enquiry -> grounded intent -> policy route + priority -> draft -> review -> local CRM record",
+  "states": [
+    "queued",
+    "processing",
+    "retry",
+    "awaiting_approval",
+    "approved",
+    "rejected",
+    "skipped",
+    "dead_letter"
+  ],
+  "max_attempts": 3,
+  "lease_seconds": 300,
+  "approval": "Separate role credential and optimistic job/record version; no external send",
+  "source": "automation/engine.py"
+}

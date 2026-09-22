@@ -1,0 +1,168 @@
+{
+  "label": "SELF-BUILT TECHNICAL PROOF — NOT A CLIENT CASE STUDY",
+  "project": "AI Lead Qualification & Routing",
+  "verified_at": "2026-09-22T06:53:35.434568+00:00",
+  "transport": "real loopback HTTP",
+  "model_execution": "real local Ollama inference; no mock",
+  "source_sha256": {
+    "automation\\__init__.py": "a8bb52b0a375d4b5623af914c5205aea403aef3c6e841a218f32f48bb62f247d",
+    "automation\\api.py": "06aaee871c912e314544f475741e2c4e439a2322912b56ca74e669d346fdd0fe",
+    "automation\\engine.py": "687d0a03552a45172b0ff0cf3e8c798922e6a748c49f00168b3b7d3e70d2ba0d",
+    "automation\\fixtures.py": "723ad7157de75a28a3c3b911f3f43426fbd7eb39d0f6dd581ac71bb4b4ba010c",
+    "automation\\llm.py": "6c317cd6a997aa5f8d3479199a5f60d96931949919db87b27f8d39cc40b8ec46",
+    "automation\\worker.py": "d3b4a2fc5921f8a1b63cbdbedbcf48580fb2cb9a0d3347b24e0c82a68d924551",
+    "automation\\workflow.py": "c8e7ba8e29afe149d42a8e1f502e4e3feb4cef3cea39c5b0e97eca672b6479f3"
+  },
+  "input": "synthetic fixture only",
+  "reviewer": "automated demo action, not a real buyer/human approval",
+  "health": {
+    "ok": true,
+    "project": "AI Lead Qualification & Routing",
+    "sink": "local synthetic SQLite",
+    "auto_send": false
+  },
+  "steps": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/webhooks/intake",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/webhooks/intake",
+      "status": 202
+    },
+    {
+      "method": "POST",
+      "path": "/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/run",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/decision",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/decision",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/decision",
+      "status": 409
+    },
+    {
+      "method": "POST",
+      "path": "/webhooks/intake",
+      "status": 202
+    },
+    {
+      "method": "GET",
+      "path": "/records/lead-56fbc97ccd7cc3625dc4",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/events",
+      "status": 200
+    }
+  ],
+  "output": {
+    "action": "local_crm_route",
+    "approval_required": true,
+    "expected_record_version": 0,
+    "external_emails_sent": 0,
+    "inference": {
+      "created_at": "2026-09-22T06:53:35.3945039Z",
+      "eval_count": 75,
+      "model": "qwen2.5-coder:7b-instruct-q4_K_M",
+      "provider": "ollama-local",
+      "total_duration_ns": 1504702100
+    },
+    "record": {
+      "analysis": {
+        "evidence": "We want to buy a CRM integration for our 15-person sales team. Our budget is USD 8000.",
+        "intent": "sales",
+        "summary": "The user is interested in purchasing a CRM integration for their 15-person sales team with a budget of USD 8000."
+      },
+      "budget_usd": 8000,
+      "company": "Northstar Sample Co",
+      "consent_to_contact": true,
+      "draft_only": true,
+      "email": "alex@northstar.example",
+      "message": "We want to buy a CRM integration for our 15-person sales team. Our budget is USD 8000.",
+      "priority": "high",
+      "reply_draft": "Thank you for your enquiry. A team member will review your request.",
+      "route": "sales-queue"
+    },
+    "record_key": "lead-56fbc97ccd7cc3625dc4"
+  },
+  "record_after_approval": {
+    "data": {
+      "analysis": {
+        "evidence": "We want to buy a CRM integration for our 15-person sales team. Our budget is USD 8000.",
+        "intent": "sales",
+        "summary": "The user is interested in purchasing a CRM integration for their 15-person sales team with a budget of USD 8000."
+      },
+      "budget_usd": 8000,
+      "company": "Northstar Sample Co",
+      "consent_to_contact": true,
+      "draft_only": true,
+      "email": "alex@northstar.example",
+      "message": "We want to buy a CRM integration for our 15-person sales team. Our budget is USD 8000.",
+      "priority": "high",
+      "reply_draft": "Thank you for your enquiry. A team member will review your request.",
+      "route": "sales-queue"
+    },
+    "version": 1
+  },
+  "effects_before_approval": 0,
+  "effects_after_approval": 1,
+  "events": [
+    {
+      "seq": 1,
+      "job_id": "2c3587fa-7c8a-4607-a425-a41b8d9c34c0",
+      "at": 1790060013.8755674,
+      "event": "accepted",
+      "details": {}
+    },
+    {
+      "seq": 2,
+      "job_id": "2c3587fa-7c8a-4607-a425-a41b8d9c34c0",
+      "at": 1790060013.8841426,
+      "event": "processing_started",
+      "details": {
+        "attempt": 1,
+        "recovered_lease": false
+      }
+    },
+    {
+      "seq": 3,
+      "job_id": "2c3587fa-7c8a-4607-a425-a41b8d9c34c0",
+      "at": 1790060015.400394,
+      "event": "awaiting_approval",
+      "details": {
+        "attempt": 1,
+        "error_code": null
+      }
+    },
+    {
+      "seq": 4,
+      "job_id": "2c3587fa-7c8a-4607-a425-a41b8d9c34c0",
+      "at": 1790060015.412131,
+      "event": "approved",
+      "details": {
+        "reviewer": "automated-demo-reviewer"
+      }
+    }
+  ],
+  "external_messages_sent": 0,
+  "cloud_api_cost_usd": 0,
+  "result": "passed"
+}

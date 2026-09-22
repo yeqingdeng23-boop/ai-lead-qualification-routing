@@ -1,0 +1,23 @@
+<!doctype html><html lang='en'><meta charset='utf-8'><meta name='viewport' content='width=device-width'>
+    <title>Workflow execution evidence</title><style>
+    body{font:16px/1.5 system-ui;color:#182a3c;background:#f6f8fb;max-width:1100px;margin:40px auto;padding:24px}
+    h1{line-height:1.2} .label{font-size:13px;font-weight:700;color:#9b3b00} .pass{color:#08705c;font-weight:700}
+    section{background:white;border:1px solid #dbe2ea;border-radius:10px;padding:24px;margin:20px 0}
+    pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f6fa;padding:16px;font-size:14px}
+    td,th{text-align:left;padding:7px;border-bottom:1px solid #dbe2ea} table{width:100%;font-size:13px}
+    </style><body><p class='label'>SELF-BUILT TECHNICAL PROOF — NOT A CLIENT CASE STUDY</p><h1>AI Lead Qualification &amp; Routing</h1><p class='pass'>PASS · real HTTP + real local model</p><p>Recorded 2026-09-22T06:53:35.434568+00:00</p><section><b>Approval boundary verified</b><p>Effects before approval: 0 → after approval: 1.<br>Worker key rejected for approval (401). Repeated approval rejected (409). No external messages sent.</p><p>Data is synthetic. Reviewer actions in this run are automated test actions. This is execution evidence, not a customer deployment or a buyer paid test.</p></section><section><h2>Structured output</h2><pre>{
+  &quot;analysis&quot;: {
+    &quot;evidence&quot;: &quot;We want to buy a CRM integration for our 15-person sales team. Our budget is USD 8000.&quot;,
+    &quot;intent&quot;: &quot;sales&quot;,
+    &quot;summary&quot;: &quot;The user is interested in purchasing a CRM integration for their 15-person sales team with a budget of USD 8000.&quot;
+  },
+  &quot;budget_usd&quot;: 8000,
+  &quot;company&quot;: &quot;Northstar Sample Co&quot;,
+  &quot;consent_to_contact&quot;: true,
+  &quot;draft_only&quot;: true,
+  &quot;email&quot;: &quot;alex@northstar.example&quot;,
+  &quot;message&quot;: &quot;We want to buy a CRM integration for our 15-person sales team. Our budget is USD 8000.&quot;,
+  &quot;priority&quot;: &quot;high&quot;,
+  &quot;reply_draft&quot;: &quot;Thank you for your enquiry. A team member will review your request.&quot;,
+  &quot;route&quot;: &quot;sales-queue&quot;
+}</pre></section><section><h2>HTTP transcript</h2><table><tr><td>GET</td><td>/health</td><td>200</td></tr><tr><td>POST</td><td>/webhooks/intake</td><td>401</td></tr><tr><td>POST</td><td>/webhooks/intake</td><td>202</td></tr><tr><td>POST</td><td>/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/run</td><td>200</td></tr><tr><td>POST</td><td>/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/decision</td><td>401</td></tr><tr><td>POST</td><td>/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/decision</td><td>200</td></tr><tr><td>POST</td><td>/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/decision</td><td>409</td></tr><tr><td>POST</td><td>/webhooks/intake</td><td>202</td></tr><tr><td>GET</td><td>/records/lead-56fbc97ccd7cc3625dc4</td><td>200</td></tr><tr><td>GET</td><td>/jobs/2c3587fa-7c8a-4607-a425-a41b8d9c34c0/events</td><td>200</td></tr></table></section><p>Model: qwen2.5-coder:7b-instruct-q4_K_M. The complete JSON file is saved beside this report.</p></body></html>
