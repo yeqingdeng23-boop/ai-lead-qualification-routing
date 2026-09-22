@@ -2,6 +2,8 @@
 
 **SELF-BUILT TECHNICAL PROOF — NOT A CLIENT CASE STUDY**
 
+**[Start here: a three-minute review of the flagship proof](START_HERE.md)**
+
 Built for JIMMYZHU with Codex assistance. This demonstrates inspectable code and recorded local execution. It does not claim client history, unaided coding experience, production deployment, certifications or revenue.
 
 Purchase enquiry -> grounded intent -> policy route + priority -> draft -> review -> local CRM record.
